@@ -3,7 +3,38 @@
 ## I. Background:
 The objective of credit card customer clustering is to segment the customer base into distinct groups based on spending patterns, transaction behaviors, and demographic characteristics. By identifying these clusters, the company aims to tailor marketing strategies, enhance customer satisfaction, and improve product offerings, ultimately driving customer loyalty and increasing profitability. This data-driven approach will enable more personalized and efficient targeting of customers, optimizing resource allocation and maximizing the return on marketing investments.
 
-## II. Conclusion:
+## II. Workflow:
+**Data Preprocessing:**
+   - Handle missing values
+   - Normalize or standardize numerical features
+   - Encode categorical variables if necessary
+   - Detect and handle outliers
+
+**Exploratory Data Analysis (EDA):**
+   - Generate summary statistics
+   - Visualize data distributions, correlations, and patterns using plots 
+   - Identify key features and potential variables for clustering
+
+**Feature Selection and Engineering:**
+   - Select relevant features based on domain knowledge and EDA insights
+   - Engineer new features that might capture important aspects of credit card usage behavior
+
+**Clustering Analysis:**
+   - Choose a clustering algorithm
+   - Determine the optimal number of clusters using methods like the elbow method or silhouette score
+   - Apply the clustering algorithm and analyze the resulting clusters
+
+**Cluster Profiling:**
+   - Summarize the characteristics of each cluster
+   - Identify distinguishing features for each cluster
+   - Create profiles for each cluster
+
+**Strategy Development:**
+   - Identify potential marketing, retention, and acquisition strategies for each cluster
+   - Develop targeted promotions, offers, or communication strategies
+   - Consider cross-selling or upselling opportunities based on cluster profiles 
+
+## III. Conclusion:
 To find the segmentations of credit card customers, first you will have to understand the data and clean it well. From knowing the types of data, cleaning the empty values data, finding out how spread out of the data are, handling the outliers, feature selection and using the clustering model well.
 The data that is used have 18 columns with 4475 entries and 155 empty values. The credit card limit ranges from 0 to 20000, peaking at 2500. Mainly credit card customers pay in 12 months tenures. The balance of the customers ranges from 0 to 17500 and peaking at a little over 0.
 After erasing the empty datas, there is still a lot of information that will be valuable for the model to read. As all of the data are numerical with encoded categorical values, the skewness will be checked for dealing with the outliers. There are different methods to be used based on the skewness of the columns. Though after handling the outlier, there doesn't seem to be a lot of differences with the data before outlier handling.
@@ -58,11 +89,10 @@ Clusters:
     * An ok amount of cash advancement
 Cluster 0 doesn't seem to like using credit cards. Majority of customers are cluster 1, seems to use credit card frugally. Cluster 2 seems quite lavish. Cluster 3 seems trying to limit use credit card. Cluster 4 are customers that seem knowledgeable in using credit cards. Cluster 5 seems to be the most lavish customers to use credit card. Cluster 4 prefers cash in advance for their pricey purchases rather than installments. Cluster 0 doesn't seem to like paying their purchases in cash advancement, seems to like installments better.
 
-## III. Recommendations:
+## IIV. Recommendations:
 For customers on cluster 0, we can offer introductory rewards or cash backs on the initial purchases to encourage card usage. Since based on what we see they hardly use credit cards, we can assume that they don't really understand the credit card benefits, that’s why we could provide education campaigns for product benefits, information, and safety in using credit cards. Other than that, we could give them a free annual fee to reduce usage barriers.
 For customers on cluster 1, we could increase their credit card limit gradually to encourage more usage. We could also provide targeted promotions with small, manageable rewards for them. Educational contents like tips on maximizing credit card benefits for them are also useful.
 For customers on cluster 2, we could offer rewards programs that match their spending habits like higher points for specific categories. We can also give them access to exclusive deals and experiences. Loyalty program rewards for frequent and larger purchases can also be beneficial.
 For customers on cluster 3, offer tools and resources to help manage spending and budgeting. Low-interest rates to reduce the cost of occasional purchases might be suitable for them. Lastly, promoting responsible credit use through educational materials might give improvement in their purchases.
 For customers on cluster 4, offer premium services such as concierge, travel insurance, and extended warranties. Other than that, we could provide flexible payment options, installment plans with low-interest rates. Inviting them to exclusive events and providing personalized experiences can make their credit card usage more enjoyable.
 For customers on cluster 5, develop high-end rewards programs with luxury benefits such as travel, fine dining, and exclusive experiences. A personalized service and support by assigning dedicated account managers can induce more credit card usage by them. Lastly, offering exclusive access to premium events and products would be suitable for this cluster of customers.
-
